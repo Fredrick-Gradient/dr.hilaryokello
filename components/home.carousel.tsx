@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { Button } from '@heroui/button';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
+import Link from 'next/link';
 
 const ImageCarousel = ({ images }) => {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -35,11 +36,17 @@ const ImageCarousel = ({ images }) => {
 
   const imageDimension = 500; // Fixed dimension for images
 
+
+
   return (
     <>
       <div>
         <h4 className='text-left text-4xl text-white font-bold'> From the Lenses</h4>
-        <Button variant='bordered' className='rounded-full text-white px-4 py-2 mt-4'> More Pictures</Button>
+        <Button variant='bordered'
+     
+        as={Link}
+        href="/gallery"
+        className='rounded-full text-white px-4 py-2 mt-4'> More Pictures</Button>
       </div>
       <div className="top-0 right-0 flex py-10 justify-end space-x-2 z-10">
         <Button

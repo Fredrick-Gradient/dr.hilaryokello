@@ -48,7 +48,7 @@ export function VideoSection({
   };
 
   return (
-    <section className={cn("py-12", className)}>
+    <section  id="clips" className={cn("py-12", className)}>
       <div className="container px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tight text-white mb-8">
           {title}

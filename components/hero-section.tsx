@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { Mic, Play } from "lucide-react";
 import { Button } from "@heroui/button";
+import Link from "next/link";
 
 export function HeroSection() {
   const { theme } = useTheme();
@@ -60,18 +61,19 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <Button
-         
+         as={Link}
+         href="/booking"
             className="text-white rounded-full"
-            href="https://karitickets.com/artist/home"
+           
             size="lg"
             variant="bordered"
-            target="_blank"
+           
           >
             <Mic className="mr-2 h-5 w-5" /> Book Tickets
           </Button>
           <Button
             className="text-white rounded-full"
-            href="#"
+            href="#clips"
             size="lg"
             variant="bordered"
           >

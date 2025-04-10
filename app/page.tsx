@@ -1,4 +1,7 @@
 import { HeroSection } from "@/components/hero-section";
+
+import ImageCarousel from "@/components/home.carousel";
+import UpcomingShows from "@/components/upcoming.show";
 import { VideoSection } from "@/components/videos";
 
 export default function Page() {
@@ -55,6 +58,17 @@ export default function Page() {
     },
   ];
 
+  const images = [
+    '/gallery/bg_booking.webp',
+    '/gallery/crowd.png',
+    '/gallerypage/DSC_9170.webp',
+    '/gallerypage/DSC_1041.webp',
+    '/gallerypage/DSC_8976.webp',
+    '/gallerypage/DSC_2148.webp',
+   '/gallerypage/DSC_8799.webp',
+   '/gallerypage/DSC_9161.webp'
+  ];
+
   return (
     <>
       <div className="">
@@ -63,6 +77,7 @@ export default function Page() {
           <HeroSection />
         </div>
 
+<UpcomingShows/>
         {/* Video Section */}
         <div className="bg-black py-16">
           <div className="max-w-7xl mx-auto px-4">
@@ -72,6 +87,15 @@ export default function Page() {
               videos={videos}
             />
           </div>
+        </div>
+
+        {/* Gallery Glimpse */}
+        <div className="bg-black py-16">
+<div className="max-w-7xl mx-auto px-4">
+
+        <ImageCarousel images={images} />
+</div>
+        
         </div>
       </div>
     </>

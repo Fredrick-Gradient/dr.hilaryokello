@@ -70,9 +70,11 @@
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
+  /* app/globals.css */
+body {
+  background-color: #000;
+  color: white; /* optional: makes text readable on black */
+}
 }
 
 @layer utilities {

@@ -22,13 +22,14 @@ const menuItems: MenuItem[] = [
     iconColor: "text-blue-500",
     icon: undefined
   },
+
   {
-    label: "Videos",
-    href: "#",
-    gradient: "radial-gradient(circle, rgba(249,115,22,0.15) 0%, rgba(234,88,12,0.06) 50%, rgba(194,65,12,0) 100%)",
-    iconColor: "text-orange-500",
+    label: "Biography",
+    href: "/biography",
+    gradient: "radial-gradient(circle, rgba(255,140,0,0.15) 0%, rgba(255,107,0,0.06) 50%, rgba(239,78,0,0) 100%)",
+    iconColor: "text-yellow-500",
     icon: undefined
-  },
+    },
   {
     label: "Gallery",
     href: "/gallery",
@@ -37,8 +38,8 @@ const menuItems: MenuItem[] = [
     icon: undefined
   },
   {
-    label: "Booking",
-    href: "#",
+    label: "Contact",
+    href: "/booking",
     gradient: "radial-gradient(circle, rgba(239,68,68,0.15) 0%, rgba(220,38,38,0.06) 50%, rgba(185,28,28,0) 100%)",
     iconColor: "text-red-500",
     icon: undefined
@@ -119,11 +120,11 @@ export function MenuBar() {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden sm:flex items-center backdrop-blur-lg  border border-gray-800 rounded-xl  px-4 py-2 shadow-xl gap-2 ml-auto">
+        <ul className="hidden sm:flex items-center backdrop-blur-lg  border border-gray-800 rounded-full px-4 py-2 shadow-xl gap-2 ml-auto">
           {menuItems.map((item) => (
             <motion.li key={item.label} className="relative">
               <motion.div
-                className="block rounded-xl overflow-visible group relative"
+                className="block overflow-visible group relative"
                 style={{ perspective: "600px" }}
                 whileHover="hover"
                 initial="initial"
@@ -139,7 +140,7 @@ export function MenuBar() {
                 />
                 <motion.a
                   href={item.href}
-                  className="flex items-center gap-2 px-4 py-2 relative z-10 bg-transparent text-muted-foreground group-hover:text-foreground transition-colors rounded-xl"
+                  className="flex items-center gap-2 px-4 py-2 relative z-10 bg-transparent text-muted-foreground group-hover:text-white transition-colors rounded-xl"
                   variants={itemVariants}
                   transition={sharedTransition}
                   style={{
@@ -154,7 +155,7 @@ export function MenuBar() {
                 </motion.a>
                 <motion.a
                   href={item.href}
-                  className="flex items-center gap-2 px-4 py-2 absolute inset-0 z-10 bg-transparent text-muted-foreground group-hover:text-foreground transition-colors rounded-xl"
+                  className="flex items-center gap-2 px-4 py-2 absolute inset-0 z-10 bg-transparent text-muted-foreground group-hover:text-white transition-colors rounded-xl"
                   variants={backVariants}
                   transition={sharedTransition}
                   style={{

@@ -32,7 +32,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
         >
-          Uganda Must Laugh - A comedy Special
+          Uganda Must Laugh 2 - A comedy Special
         </motion.h1>
         <motion.h4
           animate={{ opacity: 1, y: 0 }}
@@ -61,16 +61,16 @@ export function HeroSection() {
         >
           <Button
          
-            className="bg-gray-900 text-white rounded-full"
+            className="text-white rounded-full"
             href="https://karitickets.com/artist/home"
             size="lg"
-            variant="flat"
+            variant="bordered"
             target="_blank"
           >
             <Mic className="mr-2 h-5 w-5" /> Book Tickets
           </Button>
           <Button
-            className="bg-gray-900 text-white rounded-full"
+            className="text-white rounded-full"
             href="#"
             size="lg"
             variant="bordered"
